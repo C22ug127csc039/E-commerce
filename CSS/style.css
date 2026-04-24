@@ -112,9 +112,6 @@ main{
     scroll-snap-align: start;
     transition: transform 3s ease;
 }
-.card:hover{
-    transform:scaleX(1.05) ;
-}
 
 .card img{
     height: 200px;

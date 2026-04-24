@@ -63,16 +63,19 @@
                 type="search"
                 placeholder="Search"
               />
-              <button class="btn btn-success">Search</button>
+              <button class="btn btn-success" >Search</button>
             </form>
 
             <!-- Cart -->
-            <a href="#" class="btn btn-outline-dark me-2">
+            <a href="../HTML/card.html"  class="btn btn-outline-dark me-3 position-relative">
               <i class="bi bi-cart4"></i>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+              </span>
             </a>
 
             <!-- Login -->
-            <a href="#" class="btn btn-outline-dark ">
+            <a href="../HTML/login.html" class="btn btn-outline-dark ">
               <i class="bi bi-person"></i>
             </a>
           </div>
@@ -162,7 +165,7 @@
       <section>
         <!-- Men  -->
         <div class="container" id="men">
-          <h2 class="text-center title">Men</h2>
+          <h2 class="text-center title" >Men</h2>
           <div class="scroll-container">
             <div class="card" style="width: 18rem">
               <img
@@ -171,24 +174,22 @@
                 alt="men-shoe-1"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title" id="men-shoe-1">Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <span class="fw-bold"
-                  >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
-                >
-                <a href="#" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
-                >
+                <span class="fw-bold" id="price"
+                  >&#8377;1,499 </span><del class="text-dark">2,999</del> 50% off
+                <a href="#" onclick="addToCart()" class="btn btn-primary mt-3 ">
+                <i class="bi bi-cart4"></i> Add cart</a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
               <img
                 src="../Image/men-shoe-2.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-2"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -197,18 +198,16 @@
                   the bulk of the card's content.
                 </p>
                 <span class="fw-bold"
-                  >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
-                >
-                <a href="#" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
-                >
+                  >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span\>
+                <a href="#" onclick="addToCart('Men Shoe 2', 1299)" class="btn btn-primary mt-3 text">
+                  <i class="bi bi-cart4"></i> Add cart</a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
               <img
                 src="../Image/men-shoe-3.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-3"
                 height=""
               />
               <div class="card-body">
@@ -220,16 +219,15 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
-                >
+                <a href="#" onclick="addToCart('Men Shoe 3', 1499)" class="btn btn-primary mt-3 text">
+                  <i class="bi bi-cart4"></i> Add cart</a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
               <img
                 src="../Image/men-shoe-4.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-4"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -238,9 +236,9 @@
                   the bulk of the card's content.
                 </p>
                 <span class="fw-bold"
-                  >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
+                  >&#8377;1,199 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('Men Shoe 4', 1199)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -249,7 +247,7 @@
               <img
                 src="../Image/men-shoe-5.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-5"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -260,7 +258,7 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('Men Shoe 5', 2599)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -269,7 +267,7 @@
               <img
                 src="../Image/men-shoe-6.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-6"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -280,7 +278,7 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('Men Shoe 6', 999)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -289,7 +287,7 @@
               <img
                 src="../Image/men-shoe-7.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-7"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -300,7 +298,7 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('Men Shoe 7', 2099)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -309,7 +307,7 @@
               <img
                 src="../Image/men-shoe-8.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="men-shoe-8"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -320,7 +318,7 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('Men Shoe 8', 2399)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -335,7 +333,7 @@
               <img
                 src="../Image/women-shoe-1.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-1"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -346,7 +344,7 @@
                 <span class="fw-bold"
                   >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 1', 1499)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -355,7 +353,7 @@
               <img
                 src="../Image/women-shoe-2.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-2"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -366,7 +364,7 @@
                 <span class="fw-bold"
                   >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 2', 1299)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -375,7 +373,7 @@
               <img
                 src="../Image/women-shoe-3.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-3"
                 height=""
               />
               <div class="card-body">
@@ -387,7 +385,7 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 3', 1999)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -396,7 +394,7 @@
               <img
                 src="../Image/women-shoe-4.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-4"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -407,7 +405,7 @@
                 <span class="fw-bold"
                   >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 4', 1099)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -416,7 +414,7 @@
               <img
                 src="../Image/women-shoe-5.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-5"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -427,7 +425,7 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 5', 2599)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -436,7 +434,7 @@
               <img
                 src="../Image/women-shoe-6.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-6"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -447,7 +445,7 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 6', 999)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -456,7 +454,7 @@
               <img
                 src="../Image/women-shoe-7.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-7"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -467,7 +465,7 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 7', 2099)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -476,7 +474,7 @@
               <img
                 src="../Image/women-shoe-8.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="women-shoe-8"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -487,7 +485,7 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('women Shoe 8', 2399)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -502,7 +500,7 @@
               <img
                 src="../Image/kids-shoe-1.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-1"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -513,7 +511,7 @@
                 <span class="fw-bold"
                   >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 1', 1499)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -522,7 +520,7 @@
               <img
                 src="../Image/kids-shoe-2.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-2"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -533,7 +531,7 @@
                 <span class="fw-bold"
                   >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 2', 1299)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -542,8 +540,8 @@
               <img
                 src="../Image/kids-shoe-3.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
-                height=""
+                alt="kids-shoe-3"
+                
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -554,7 +552,7 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 3', 1999)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -563,7 +561,7 @@
               <img
                 src="../Image/kids-shoe-4.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-4"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -574,7 +572,7 @@
                 <span class="fw-bold"
                   >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 4', 1099)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -583,7 +581,7 @@
               <img
                 src="../Image/kids-shoe-5.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-5"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -594,7 +592,7 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 5', 2599)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -603,7 +601,7 @@
               <img
                 src="../Image/kids-shoe-6.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-6"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -614,7 +612,7 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 6', 999)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -623,7 +621,7 @@
               <img
                 src="../Image/kids-shoe-7.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-7"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -634,7 +632,7 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 7', 2099)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -643,7 +641,7 @@
               <img
                 src="../Image/kids-shoe-8.jpg"
                 class="card-img-top"
-                alt="men-shoe-1"
+                alt="kids-shoe-8"
               />
               <div class="card-body">
                 <h5 class="card-title">Shoe</h5>
@@ -654,7 +652,7 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <a href="#" class="btn btn-primary mt-3 text">
+                <a href="#" onclick="addToCart('kids Shoe 8', 2399)" class="btn btn-primary mt-3 text">
                   <i class="bi bi-cart4"></i> Add cart</a
                 >
               </div>
@@ -768,17 +766,21 @@
             Focusing on one new product with high-quality images and benefits.
           </p>
           <div class="input-group mb-3">
+            <form id="newsletterForm" class="d-flex col-12">
             <input
-              type="text"
+              type="email"
+              id="email"
               class="form-control"
               placeholder="Enter Your Email"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
-              required
             />
+            
             <button class="btn btn-secondary" type="submit" id="button-addon2">
               Subcribe
             </button>
+            </form>
+            <p id="error" class="text-danger p-2 "></p>
           </div>
         </div>
         <div class="row details">
