@@ -26,8 +26,8 @@
     />
   </head>
   <body>
-    <header class="container-fluid p-3 ">
-      <nav class="navbar navbar-expand-lg navbar-light  p-3">
+    <header class="container-fluid p-3 text">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
         <!-- Brand -->
         <h1 class="brand fw-bold">.MyShoe</h1>
 
@@ -63,11 +63,11 @@
                 type="search"
                 placeholder="Search"
               />
-              <button class="btn btn-success" >Search</button>
+              <button type="submit" class="btn btn-success" >Search</button>
             </form>
 
             <!-- Cart -->
-            <a href="../HTML/card.html"  class="btn btn-outline-dark me-3 position-relative">
+            <a href="cart.html"  class="btn btn-outline-dark me-3 position-relative">
               <i class="bi bi-cart4"></i>
               <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               0
@@ -174,15 +174,15 @@
                 alt="men-shoe-1"
               />
               <div class="card-body">
-                <h5 class="card-title" id="men-shoe-1">Shoe</h5>
+                <h5 class="card-title" id="men-shoe-1"> Running Shoes</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <span class="fw-bold" id="price"
-                  >&#8377;1,499 </span><del class="text-dark">2,999</del> 50% off
-                <a href="#" onclick="addToCart()" class="btn btn-primary mt-3 ">
-                <i class="bi bi-cart4"></i> Add cart</a>
+                <span class="fw-bold " 
+                  >&#8377;1,499 <del class="text-dark">2,999</del> 50% off </span>
+                <button onclick="addToCart('Men Shoe 1', 1499, '../Image/men-shoe-1.jpg')" class="btn btn-primary mt-3 ">
+                <i class="bi bi-cart4"></i> Add cart</button>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -192,15 +192,15 @@
                 alt="men-shoe-2"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Nike Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
                 <span class="fw-bold"
-                  >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span\>
-                <a href="#" onclick="addToCart('Men Shoe 2', 1299)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a>
+                  >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span>
+                <button onclick="addToCart('Men Shoe 2', 1299)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -208,10 +208,9 @@
                 src="../Image/men-shoe-3.jpg"
                 class="card-img-top"
                 alt="men-shoe-3"
-                height=""
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Adidas Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -219,8 +218,8 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <a href="#" onclick="addToCart('Men Shoe 3', 1499)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a>
+                <button onclick="addToCart('Men Shoe 3', 1999)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -230,7 +229,7 @@
                 alt="men-shoe-4"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Puma Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -238,8 +237,8 @@
                 <span class="fw-bold"
                   >&#8377;1,199 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <a href="#" onclick="addToCart('Men Shoe 4', 1199)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('Men Shoe 4', 1199)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -250,7 +249,7 @@
                 alt="men-shoe-5"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Reebok Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -258,8 +257,8 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <a href="#" onclick="addToCart('Men Shoe 5', 2599)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('Men Shoe 5', 2599)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -270,7 +269,7 @@
                 alt="men-shoe-6"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">New Balance Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -278,8 +277,8 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <a href="#" onclick="addToCart('Men Shoe 6', 999)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('Men Shoe 6', 999)" class="btn btn-primary mt-3">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -290,7 +289,7 @@
                 alt="men-shoe-7"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Bata Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -298,8 +297,8 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <a href="#" onclick="addToCart('Men Shoe 7', 2099)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('Men Shoe 7', 2099)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -310,7 +309,7 @@
                 alt="men-shoe-8"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Woodland Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -318,8 +317,8 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <a href="#" onclick="addToCart('Men Shoe 8', 2399)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('Men Shoe 8', 2399)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -336,7 +335,7 @@
                 alt="women-shoe-1"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Oxford Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -344,8 +343,8 @@
                 <span class="fw-bold"
                   >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 1', 1499)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 1', 1499)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -356,7 +355,7 @@
                 alt="women-shoe-2"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Slip-on Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -364,8 +363,8 @@
                 <span class="fw-bold"
                   >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 2', 1299)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 2', 1299)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -374,10 +373,9 @@
                 src="../Image/women-shoe-3.jpg"
                 class="card-img-top"
                 alt="women-shoe-3"
-                height=""
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Moccasins Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -385,8 +383,8 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 3', 1999)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 3', 1999)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -397,7 +395,7 @@
                 alt="women-shoe-4"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Slides Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -405,8 +403,8 @@
                 <span class="fw-bold"
                   >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 4', 1099)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 4', 1099)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -417,7 +415,7 @@
                 alt="women-shoe-5"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title"> Stilettos Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -425,8 +423,8 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 5', 2599)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 5', 2599)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -437,7 +435,7 @@
                 alt="women-shoe-6"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Walking Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -445,8 +443,8 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 6', 999)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 6', 999)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -457,7 +455,7 @@
                 alt="women-shoe-7"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Training Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -465,8 +463,8 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 7', 2099)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 7', 2099)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -477,7 +475,7 @@
                 alt="women-shoe-8"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Running Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -485,8 +483,8 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <a href="#" onclick="addToCart('women Shoe 8', 2399)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('women Shoe 8', 2399)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -503,7 +501,7 @@
                 alt="kids-shoe-1"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Walking Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -511,8 +509,8 @@
                 <span class="fw-bold"
                   >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 1', 1499)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 1', 1499)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -523,7 +521,7 @@
                 alt="kids-shoe-2"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">School Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -531,8 +529,8 @@
                 <span class="fw-bold"
                   >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 2', 1299)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 2', 1299)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -544,7 +542,7 @@
                 
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Sports Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -552,8 +550,8 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 3', 1999)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 3', 1999)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -564,7 +562,7 @@
                 alt="kids-shoe-4"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Gym Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -572,8 +570,8 @@
                 <span class="fw-bold"
                   >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 4', 1099)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 4', 1099)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -584,7 +582,7 @@
                 alt="kids-shoe-5"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Snow Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -592,8 +590,8 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 5', 2599)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 5', 2599)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -604,7 +602,7 @@
                 alt="kids-shoe-6"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">winter Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -612,8 +610,8 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 6', 999)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 6', 999)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -624,7 +622,7 @@
                 alt="kids-shoe-7"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Booties Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -632,8 +630,8 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 7', 2099)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 7', 2099)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -644,7 +642,7 @@
                 alt="kids-shoe-8"
               />
               <div class="card-body">
-                <h5 class="card-title">Shoe</h5>
+                <h5 class="card-title">Soft Sole Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -652,8 +650,8 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <a href="#" onclick="addToCart('kids Shoe 8', 2399)" class="btn btn-primary mt-3 text">
-                  <i class="bi bi-cart4"></i> Add cart</a
+                <button onclick="addToCart('kids Shoe 8', 2399)" class="btn btn-primary mt-3 ">
+                  <i class="bi bi-cart4"></i> Add cart</button
                 >
               </div>
             </div>
@@ -730,6 +728,7 @@
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </section>
       <section class=" container main-details " id="about">
@@ -777,7 +776,7 @@
             />
             
             <button class="btn btn-secondary" type="submit" id="button-addon2">
-              Subcribe
+              Subscribe
             </button>
             </form>
             <p id="error" class="text-danger p-2 "></p>
@@ -802,7 +801,7 @@
             </ul>
           </div>
           <div class="col-lg-3 col-sm-6 col-12 p-4">
-            <h4>Get Helps</h4>
+            <h4>Get Help</h4>
             <ul class="point">
               <li>Helps centre(FAQ)</li>
             </ul>
@@ -810,9 +809,9 @@
           <div class="col-lg-3 col-sm-6 col-12 p-4">
             <h4>Other</h4>
             <ul class="point">
-              <li>features</li>
-              <li>resource</li>
-              <li>media</li>
+              <li>Features</li>
+              <li>Resource</li>
+              <li>Media</li>
               <li>Trust center</li>
             </ul>
           </div>

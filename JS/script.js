@@ -1,41 +1,44 @@
+function addToCart(name, price, image) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+  let existing = cart.find(item => item.name === name);
 
-// Add to cart
-// cart count 
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: price,
+      image: image,
+      qty: 1
+    });
+  }
 
-let cart = [];
-
-function addToCart() {
-  let productName=document.getElementById("men-shoe-1");
-  let price=document.getElementById("price").value;
-  let product = { name: productName, price: price };
-
-  cart.push(product);
-
-  alert(productName + " added to cart 🛒");
-
-  console.log(cart);
+  localStorage.setItem("cart", JSON.stringify(cart));
 
   updateCartCount();
-
 }
 
 function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
   document.getElementById("cart-count").innerText = cart.length;
 }
+
+updateCartCount();
+
 
 // Newsletter 
 document.getElementById("newsletterForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const error = document.getElementById("error");
+  let email = document.getElementById("email").value;
+  let error = document.getElementById("error");
 
   if (email === "") {
-    error.textContent = "Email is required";
-  } 
-  else {
-    error.textContent = "";
+    error.innerText = "Email is required!";
+  } else if (!email.includes("@")) {
+    error.innerText = "Enter valid email!";
+  } else {
     alert("Subscribed successfully!");
     
     // Reset input
