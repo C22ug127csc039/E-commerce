@@ -11,6 +11,17 @@ html{
     scroll-behavior: smooth;
 }
 
+.wishlist i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* padding: 10px; */
+    border: none;
+    color: whitesmoke;
+}
+.wishlist i:hover{
+    color: red;
+}
 /* HEADER  */
 
 header,footer{

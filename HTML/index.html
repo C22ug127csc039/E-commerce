@@ -49,7 +49,7 @@
             <li class="nav-item fw-bold">
               <a class="nav-link" href="#about">About</a>
             </li>
-            
+
             <li class="nav-item fw-bold">
               <a class="nav-link" href="#products">Product</a>
             </li>
@@ -63,28 +63,55 @@
                 type="search"
                 placeholder="Search"
               />
-              <button type="submit" class="btn btn-success" >Search</button>
+              <button type="submit" class="btn btn-success">Search</button>
             </form>
 
             <!-- Cart -->
-            <a href="cart.html"  class="btn btn-outline-dark me-3 position-relative">
+            <a
+              href="cart.html"
+              class="btn btn-outline-dark me-3 position-relative"
+            >
               <i class="bi bi-cart4"></i>
-              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              0
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                0
               </span>
             </a>
+            <!-- Wishlist -->
+            <a href="./wishlist.html" class="btn btn-outline-danger me-3">
+              <i class="fa fa-heart-o"></i>
+            </a>
+
+            <!-- Username -->
+            <!-- <span id="usernameDisplay" class="ms-2 text-danger"></span> -->
 
             <!-- Login -->
-            <a href="../HTML/login.html" class="btn btn-outline-dark ">
+            <!-- Login Button -->
+            <a
+              href="../HTML/login.html"
+              id="loginBtn"
+              class="btn btn-outline-dark me-3"
+            >
               <i class="bi bi-person"></i>
             </a>
+
+            <!-- Logout Button -->
+            <button
+              onclick="logout()"
+              id="logoutBtn"
+              class="btn btn-danger ms-2"
+            >
+              <i class="fa fa-sign-out"></i>
+            </button>
           </div>
         </div>
       </nav>
     </header>
     <main class="py-4">
       <!-- Slide-image  -->
-      <section class="container p-3 slide-image  ">
+      <section class="container p-3 slide-image">
         <!-- Slide  -->
         <div
           id="carouselExampleIndicators"
@@ -125,7 +152,7 @@
             </div>
           </div>
           <button
-            class="carousel-control-prev "
+            class="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
@@ -147,17 +174,25 @@
       <!-- Category  -->
       <section class="category container mb-5">
         <h1 class="text-center p-4">Category</h1>
-        <div class="d-flex justify-content-evenly align-items-center text-center">
+        <div
+          class="d-flex justify-content-evenly align-items-center text-center"
+        >
           <div class="category-circle">
-            <a href="#kids"><i class="fa fa-child" style="font-size:48px;"></i></a>
+            <a href="#kids"
+              ><i class="fa fa-child" style="font-size: 48px"></i
+            ></a>
             <h5>Kids</h5>
-          </div>          
+          </div>
           <div class="category-circle">
-            <a href="#men"><i class="fa fa-male" style="font-size:48px;"></i></a>
+            <a href="#men"
+              ><i class="fa fa-male" style="font-size: 48px"></i
+            ></a>
             <h5>Men</h5>
           </div>
           <div class="category-circle">
-            <a href="#women"><i class="fa fa-female" style="font-size:48px;"></i></a>
+            <a href="#women"
+              ><i class="fa fa-female" style="font-size: 48px"></i
+            ></a>
             <h5>Women</h5>
           </div>
         </div>
@@ -165,24 +200,32 @@
       <section>
         <!-- Men  -->
         <div class="container" id="men">
-          <h2 class="text-center title" >Men</h2>
+          <h2 class="text-center title">Men</h2>
           <div class="scroll-container">
-            <div class="card" style="width: 18rem">
+            <div class="card position-relative" style="width: 18rem">
               <img
                 src="../Image/men-shoe-1.jpg"
                 class="card-img-top"
                 alt="men-shoe-1"
               />
               <div class="card-body">
-                <h5 class="card-title" id="men-shoe-1"> Running Shoes</h5>
+                <h5 class="card-title" id="men-shoe-1">Running Shoes</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <span class="fw-bold " 
-                  >&#8377;1,499 <del class="text-dark">2,999</del> 50% off </span>
-                <button onclick="addToCart('Men Shoe 1', 1499, '../Image/men-shoe-1.jpg')" class="btn btn-primary mt-3 ">
-                <i class="bi bi-cart4"></i> Add cart</button>
+                <span class="fw-bold"
+                  >&#8377;1,499 <del class="text-dark">2,999</del> 50% off
+                </span>
+                <button
+                  onclick="
+                    addToCart('Men Shoe 1', 1499, '../Image/men-shoe-1.jpg')
+                  "
+                  class="btn btn-primary mt-3"
+                >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Running Shoes', 1499, '../Image/men-shoe-1.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -198,9 +241,17 @@
                   the bulk of the card's content.
                 </p>
                 <span class="fw-bold"
-                  >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span>
-                <button onclick="addToCart('Men Shoe 2', 1299)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button>
+                  >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
+                >
+                <button
+                  onclick="
+                    addToCart('Men Shoe 2', 1299, '../Image/men-shoe-2.jpg')
+                  "
+                  class="btn btn-primary mt-3"
+                >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none " onclick="addToWishlist('Nike Shoe', 1299, '../Image/men-shoe-2.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -218,8 +269,15 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <button onclick="addToCart('Men Shoe 3', 1999)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button>
+                <button
+                  onclick="
+                    addToCart('Men Shoe 3', 1999, '../Image/men-shoe-3.jpg')
+                  "
+                  class="btn btn-primary mt-3"
+                >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Adidas Shoe', 1999, '../Image/men-shoe-3.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -237,9 +295,15 @@
                 <span class="fw-bold"
                   >&#8377;1,199 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <button onclick="addToCart('Men Shoe 4', 1199)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('Men Shoe 4', 1199, '../Image/men-shoe-4.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Puma Shoe', 1199, '../Image/men-shoe-4.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -257,9 +321,15 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <button onclick="addToCart('Men Shoe 5', 2599)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('Men Shoe 5', 2599, '../Image/men-shoe-5.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Reebok Shoe', 2599, '../Image/men-shoe-5.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -277,9 +347,15 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <button onclick="addToCart('Men Shoe 6', 999)" class="btn btn-primary mt-3">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('Men Shoe 6', 999, '../Image/men-shoe-6.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('New Balance Shoe', 999, '../Image/men-shoe-6.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -297,9 +373,15 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <button onclick="addToCart('Men Shoe 7', 2099)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('Men Shoe 7', 2099, '../Image/men-shoe-7.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Bata Shoe', 2099, '../Image/men-shoe-7.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -317,9 +399,15 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <button onclick="addToCart('Men Shoe 8', 2399)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('Men Shoe 8', 2399, '../Image/men-shoe-8.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Woodland Shoe', 2399, '../Image/men-shoe-8.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
           </div>
@@ -343,9 +431,15 @@
                 <span class="fw-bold"
                   >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
                 >
-                <button onclick="addToCart('women Shoe 1', 1499)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 1', 1499, '../Image/women-shoe-1.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none " onclick="addToWishlist('Oxford Shoe', 1499, '../Image/women-shoe-1.jpg')" ><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -363,9 +457,15 @@
                 <span class="fw-bold"
                   >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
                 >
-                <button onclick="addToCart('women Shoe 2', 1299)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 2', 1299, '../Image/women-shoe-2.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none" onclick="addToWishlist('Slip-on Shoe', 1299, '../Image/women-shoe-2.jpg')"><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -383,9 +483,15 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <button onclick="addToCart('women Shoe 3', 1999)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 3', 1999, '../Image/women-shoe-3.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -403,9 +509,15 @@
                 <span class="fw-bold"
                   >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <button onclick="addToCart('women Shoe 4', 1099)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 4', 1099, '../Image/women-shoe-4.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -415,7 +527,7 @@
                 alt="women-shoe-5"
               />
               <div class="card-body">
-                <h5 class="card-title"> Stilettos Shoe</h5>
+                <h5 class="card-title">Stilettos Shoe</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -423,9 +535,15 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <button onclick="addToCart('women Shoe 5', 2599)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 5', 2599, '../Image/women-shoe-5.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -443,9 +561,15 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <button onclick="addToCart('women Shoe 6', 999)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 6', 999, '../Image/women-shoe-6.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -463,9 +587,15 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <button onclick="addToCart('women Shoe 7', 2099)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 7', 2099, '../Image/women-shoe-7.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -483,17 +613,23 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <button onclick="addToCart('women Shoe 8', 2399)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('women Shoe 8', 2399, '../Image/women-shoe-8.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
           </div>
         </div>
         <!-- Kids  -->
-        <div class="container " id="kids">
+        <div class="container" id="kids">
           <h2 class="text-center title">Kids</h2>
-          <div class="scroll-container ">
+          <div class="scroll-container">
             <div class="card" style="width: 18rem">
               <img
                 src="../Image/kids-shoe-1.jpg"
@@ -509,9 +645,15 @@
                 <span class="fw-bold"
                   >&#8377;1,499 <del class="text-dark">2,999</del> 50% off</span
                 >
-                <button onclick="addToCart('kids Shoe 1', 1499)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 1', 1499, '../Image/kids-shoe-1.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -529,9 +671,15 @@
                 <span class="fw-bold"
                   >&#8377;1,299 <del class="text-dark">3,299</del> 70% off</span
                 >
-                <button onclick="addToCart('kids Shoe 2', 1299)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 2', 1299, '../Image/kids-shoe-2.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -539,7 +687,6 @@
                 src="../Image/kids-shoe-3.jpg"
                 class="card-img-top"
                 alt="kids-shoe-3"
-                
               />
               <div class="card-body">
                 <h5 class="card-title">Sports Shoe</h5>
@@ -550,9 +697,15 @@
                 <span class="fw-bold"
                   >&#8377;1,999 <del class="text-dark">5,999</del> 60% off</span
                 >
-                <button onclick="addToCart('kids Shoe 3', 1999)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 3', 1999, '../Image/kids-shoe-3.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -570,9 +723,15 @@
                 <span class="fw-bold"
                   >&#8377;1,099 <del class="text-dark">3,299</del> 67% off</span
                 >
-                <button onclick="addToCart('kids Shoe 4', 1099)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 4', 1099, '../Image/kids-shoe-4.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -590,9 +749,15 @@
                 <span class="fw-bold"
                   >&#8377;2,599 <del class="text-dark">3,299</del> 47% off</span
                 >
-                <button onclick="addToCart('kids Shoe 5', 2599)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 5', 2599, '../Image/kids-shoe-5.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -610,9 +775,15 @@
                 <span class="fw-bold"
                   >&#8377;999 <del class="text-dark">2,299</del> 59% off</span
                 >
-                <button onclick="addToCart('kids Shoe 6', 999)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 6', 999, '../Image/kids-shoe-6.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -630,9 +801,15 @@
                 <span class="fw-bold"
                   >&#8377;2,099 <del class="text-dark">3,299</del> 36% off</span
                 >
-                <button onclick="addToCart('kids Shoe 7', 2099)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 7', 2099, '../Image/kids-shoe-7.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
             <div class="card" style="width: 18rem">
@@ -650,80 +827,176 @@
                 <span class="fw-bold"
                   >&#8377;2,399 <del class="text-dark">3,299</del> 43% off</span
                 >
-                <button onclick="addToCart('kids Shoe 8', 2399)" class="btn btn-primary mt-3 ">
-                  <i class="bi bi-cart4"></i> Add cart</button
+                <button
+                  onclick="
+                    addToCart('kids Shoe 8', 2399, '../Image/kids-shoe-8.jpg')
+                  "
+                  class="btn btn-primary mt-3"
                 >
+                  <i class="bi bi-cart4"></i> Add cart
+                </button>
+                <a class="wishlist btn btn-outline-none "><i class="bi bi-heart-fill fs-3"></i></a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="container " id="products">
-        <div class=" row py-4" >
+      <section class="container" id="products">
+        <div class="row py-4">
           <div class="text-center col-12">
             <div>
-              <div class="row p-1 ">
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/kids-shoe-1.jpg" alt="" width="70px" height="70px">
+              <div class="row p-1">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/kids-shoe-1.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/women-shoe-5.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/women-shoe-5.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/men-shoe-6.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/men-shoe-6.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/men-shoe-7.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/men-shoe-7.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/kids-shoe-7.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/kids-shoe-7.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/women-shoe-4.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/women-shoe-4.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/kids-shoe-2.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/kids-shoe-2.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/men-shoe-1.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/men-shoe-1.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center">
-                  <img src="../Image/women-shoe-8.jpg" alt="" width="70px" height="70px">
+                <div
+                  class="col-md-4 col-sm-6 col-12 d-flex my-2 text-dark justify-content-center"
+                >
+                  <img
+                    src="../Image/women-shoe-8.jpg"
+                    alt=""
+                    width="70px"
+                    height="70px"
+                  />
                   <div class="ms-2 price">
                     <h6>Black lace Heels</h6>
-                  <p><span>&#8377;1,499 </span><del class="text-dark">2,999</del></p>
+                    <p>
+                      <span>&#8377;1,499 </span
+                      ><del class="text-dark">2,999</del>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -731,15 +1004,15 @@
           </div>
         </div>
       </section>
-      <section class=" container main-details " id="about">
-        <div class=" row text-center m-1">
+      <section class="container main-details" id="about">
+        <div class="row text-center m-1">
           <div class="p-5 col-lg-3 col-sm-6 col-12 p-4">
             <i class="fa fa-truck fs-1"></i>
             <h4>Free Delivery</h4>
             <p>Free shipping for all order.</p>
           </div>
           <div class="p-5 col-lg-3 col-sm-6 col-12 p-4">
-            <i class="bi bi-arrow-counterclockwise fs-1"></i> 
+            <i class="bi bi-arrow-counterclockwise fs-1"></i>
             <h4>Return Policy</h4>
             <p>Free shipping for all order.</p>
           </div>
@@ -748,7 +1021,7 @@
             <h4>24/7 support</h4>
             <p>Free shipping for all order.</p>
           </div>
-          <div class="p-5 col-lg-3 col-sm-6 col-12 p-4 ">
+          <div class="p-5 col-lg-3 col-sm-6 col-12 p-4">
             <i class="bi bi-shield-lock fs-1"></i>
             <h4>Secure Payment</h4>
             <p>Free shipping for all order.</p>
@@ -766,20 +1039,24 @@
           </p>
           <div class="input-group mb-3">
             <form id="newsletterForm" class="d-flex col-12">
-            <input
-              type="email"
-              id="email"
-              class="form-control"
-              placeholder="Enter Your Email"
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            
-            <button class="btn btn-secondary" type="submit" id="button-addon2">
-              Subscribe
-            </button>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter Your Email"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+
+              <button
+                class="btn btn-secondary"
+                type="submit"
+                id="button-addon2"
+              >
+                Subscribe
+              </button>
             </form>
-            <p id="error" class="text-danger p-2 "></p>
+            <p id="error" class="text-danger p-2"></p>
           </div>
         </div>
         <div class="row details">

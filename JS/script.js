@@ -26,6 +26,34 @@ function updateCartCount() {
 
 updateCartCount();
 
+// Login  logout
+
+let user = localStorage.getItem("user");
+
+let loginBtn = document.getElementById("loginBtn");
+let logoutBtn = document.getElementById("logoutBtn");
+let usernameDisplay = document.getElementById("usernameDisplay");
+
+// Check login status
+if (user) {
+  // Logged in
+  loginBtn.style.display = "none";
+  logoutBtn.style.display = "inline-block";
+  // usernameDisplay.innerText = "Hi, " + user;
+} else {
+  // Not logged in
+  loginBtn.style.display = "inline-block";
+  logoutBtn.style.display = "none";
+  // usernameDisplay.innerText = "";
+}
+
+// Logout function
+function logout() {
+  localStorage.removeItem("user");
+  alert("Logged out!");
+  window.location.href = "login.html";
+}
+
 
 // Newsletter 
 document.getElementById("newsletterForm").addEventListener("submit", function(e) {

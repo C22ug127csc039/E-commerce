@@ -11,7 +11,6 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
   }
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
-
   let exists = users.find(user => user.username === username);
 
   if (exists) {

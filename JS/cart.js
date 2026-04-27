@@ -44,19 +44,19 @@ function renderCart() {
 
   document.getElementById("total-price").innerText = "Total: ₹" + total;
 
-  // ✅ ALWAYS SAVE
+  // ALWAYS SAVE
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 
-// 🔁 Increase
+// Increase
 function increaseQty(index) {
   cart[index].qty++;
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
 
-// 🔁 Decrease
+// Decrease
 function decreaseQty(index) {
   if (cart[index].qty > 1) {
     cart[index].qty--;
@@ -67,7 +67,7 @@ function decreaseQty(index) {
   renderCart();
 }
 
-// ❌ Remove
+// Remove
 function removeItem(index) {
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
