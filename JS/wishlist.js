@@ -16,8 +16,8 @@ function renderWishlist() {
 
     row.innerHTML = `
       <td>
-        <div style="display:flex; gap:10px; align-items:center;">
-          <img src="${item.image}" width="60">
+        <div style="display:flex; gap:10px;  align-items:center;">
+          <img src="${item.image}" width="60" height="60">
           <h6>${item.name}</h6>
         </div>
       </td>

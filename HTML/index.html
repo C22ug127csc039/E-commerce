@@ -229,10 +229,11 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist(
+                    toggleWishlist(
                       'Running Shoes',
                       1499,
                       '../Image/men-shoe-1.jpg',
+                      this,
                     )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
@@ -265,7 +266,12 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist('Nike Shoe', 1299, '../Image/men-shoe-2.jpg')
+                    toggleWishlist(
+                      'Nike Shoe',
+                      1299,
+                      '../Image/men-shoe-2.jpg',
+                      this,
+                    )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
@@ -297,10 +303,11 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist(
+                    toggleWishlist(
                       'Adidas Shoe',
                       1999,
                       '../Image/men-shoe-3.jpg',
+                      this,
                     )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
@@ -333,7 +340,12 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist('Puma Shoe', 1199, '../Image/men-shoe-4.jpg')
+                    toggleWishlist(
+                      'Puma Shoe',
+                      1199,
+                      '../Image/men-shoe-4.jpg',
+                      this,
+                    )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
@@ -365,10 +377,11 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist(
+                    toggleWishlist(
                       'Reebok Shoe',
                       2599,
                       '../Image/men-shoe-5.jpg',
+                      this,
                     )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
@@ -401,10 +414,11 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist(
+                    toggleWishlist(
                       'New Balance Shoe',
                       999,
                       '../Image/men-shoe-6.jpg',
+                      this,
                     )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
@@ -437,7 +451,12 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist('Bata Shoe', 2099, '../Image/men-shoe-7.jpg')
+                    toggleWishlist(
+                      'Bata Shoe',
+                      2099,
+                      '../Image/men-shoe-7.jpg',
+                      this,
+                    )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
@@ -469,10 +488,11 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist(
+                    toggleWishlist(
                       'Woodland Shoe',
                       2399,
                       '../Image/men-shoe-8.jpg',
+                      this,
                     )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
@@ -548,10 +568,11 @@
                 <a
                   class="wishlist btn btn-outline-none"
                   onclick="
-                    addToWishlist(
+                    toggleWishlist(
                       'Slip-on Shoe',
                       1299,
                       '../Image/women-shoe-2.jpg',
+                      this,
                     )
                   "
                   ><i class="bi bi-heart-fill fs-3"></i
@@ -581,7 +602,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Moccasins Shoe',
+                      1999,
+                      '../Image/women-shoe-3.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -609,7 +639,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Slides Shoe',
+                      1099,
+                      '../Image/women-shoe-4.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -637,7 +676,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Stilettos Shoe',
+                      2599,
+                      '../Image/women-shoe-5.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -665,7 +713,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Walking Shoe',
+                      999,
+                      '../Image/women-shoe-6.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -693,7 +750,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Training Shoe',
+                      2099,
+                      '../Image/women-shoe-7.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -721,7 +787,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Running Shoe',
+                      2399,
+                      '../Image/women-shoe-8.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -755,7 +830,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Walking Shoe',
+                      1499,
+                      '../Image/kids-shoe-1.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -783,7 +867,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'School Shoe',
+                      1299,
+                      '../Image/kids-shoe-2.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -811,7 +904,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Sports Shoe',
+                      1999,
+                      '../Image/kids-shoe-3.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -839,7 +941,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'gym Shoe',
+                      1099,
+                      '../Image/kids-shoe-4.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -867,7 +978,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Snow Shoe',
+                      2599,
+                      '../Image/kids-shoe-5.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -895,7 +1015,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'winter Shoe',
+                      999,
+                      '../Image/kids-shoe-6.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -923,7 +1052,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Booties Shoe',
+                      2099,
+                      '../Image/kids-shoe-7.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
@@ -951,7 +1089,16 @@
                 >
                   <i class="bi bi-cart4"></i> Add cart
                 </button>
-                <a class="wishlist btn btn-outline-none"
+                <a
+                  class="wishlist btn btn-outline-none"
+                  onclick="
+                    toggleWishlist(
+                      'Soft Sole Shoe',
+                      2399,
+                      '../Image/kids-shoe-8.jpg',
+                      this,
+                    )
+                  "
                   ><i class="bi bi-heart-fill fs-3"></i
                 ></a>
               </div>
