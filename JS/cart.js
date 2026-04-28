@@ -90,7 +90,7 @@ function checkout() {
     return;
   }
 
-  if (confirm("Confirm your order?")) {
+  if (confirm("Are you sure you want to place this order?")) {
     alert("Order placed successfully!");
     localStorage.removeItem("cart");
     cart = [];

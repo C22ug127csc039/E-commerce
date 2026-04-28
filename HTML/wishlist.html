@@ -27,7 +27,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cloudflare.com" />
   </head>
   <body>
     <header class="container-fluid p-3 text">
@@ -85,8 +84,16 @@
     </header>
     <div class="container py-5">
         <h2 class="text-center mb-4">Your Wishlist</h2>
-        <div id="cart-body">
-
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="wishlist-body"></tbody>
+        </table>
         </div>
  
     </div>
