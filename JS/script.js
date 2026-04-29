@@ -93,7 +93,7 @@ function searchProduct(event) {
     });
 
     // Hide whole section if no product inside matches
-    section.style.display = sectionMatch ? "block" : "none";
+    section.style.display = sectionMatch ? "" : "none";
   });
 
   // If nothing found → show all again
@@ -103,7 +103,7 @@ function searchProduct(event) {
     sections.forEach(section => {
       section.style.display = "block";
       section.querySelectorAll(".card").forEach(card => {
-        card.style.display = "block";
+        card.style.display = "";
       });
     });
   }
@@ -121,7 +121,7 @@ function handleAuthUI() {
   let loginBtn = document.getElementById("loginBtn");
   let logoutBtn = document.getElementById("logoutBtn");
 
-  // 🔒 Safe check (prevents null error)
+  // Safe check (prevents null error)
   if (!loginBtn || !logoutBtn) return;
 
   if (user) {
@@ -136,7 +136,11 @@ function handleAuthUI() {
 }
 
 // Run after page loads
-document.addEventListener("DOMContentLoaded", handleAuthUI);
+document.addEventListener("DOMContentLoaded", () => {
+  handleAuthUI();
+  highlightWishlist();
+  updateCartCount();
+});
 
 
 // Logout function
@@ -149,7 +153,7 @@ function logout() {
   handleAuthUI();
 
   // optional redirect
-  window.location.href = "login.html";
+  window.location.href = "./login.html";
 }
 
 // ================= SAFE NEWSLETTER =================
